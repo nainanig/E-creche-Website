@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+var arr=new Array(3);
+arr[0]="/ecreche/images/i1.jpg";
+arr[1]="/ecreche/images/i2.jpg";
+arr[2]="/ecreche/images/i3.jpg";
+var idx=0;
+function changePic()
+{
+	var im=document.getElementById("img1");
+	im.src=arr[idx];
+	idx++;
+	if(idx>2)
+		{
+		   idx=0;
+		}
+	setTimeout("changePic()", 2000);
+	}
+</script>
+</head>
+<body onload="changePic()">
+
+<div style="top:0%;left:0%;width:100%;height:100%;position:absolute;background-image:url('/ecreche/images/nice-background-pattern-176.gif');">
+<div style="top: 0;left: 0;width: 100%;height: 20%;background-color: white;" >
+<img src="/ecreche/images/FreeVector-Flying-Bird-Logo.jpg" style="top: 0;left: 0;width: 10%;height: 100%">
+<img src="/ecreche/images/creche.png" style="top:0%;left:100%;width:10%;height:100%">
+<h1 style="position: absolute;color: darkblue;top: 3px;left: 300px;width: 10%;height: 10%">Blooming Birds</h1></div>
+
+<a href="/ecreche/index.html">Home</a>
+<div style="top:20%;left:0%;width:100%;height:10%;position:absolute;">
+<h2 style="color:darkred">ABOUT US</h2>
+</div>
+<div style="top:30%;left:0%;width:50%;height:60%;position:absolute; ">
+<p style="margin:10px;10px;10px;10px;color:royal blue">
+<h3>BLOOMING BIRDS is a long established creche that is a highly reputable provider of quality CHILDCARE. The creche aims to provide a happy, caring, secure educationally based Environment for each and every child . The ethos at Blooming Birds is one of "Children First" and the belief that every child is unique child, one who is constantly learning and evolving into a resilient, capable, confident individual. The ethos is achieved through the development of a Positive Partnership with parents and by providing an environment which is sensitiveand responsive to the child's feelings, need and interests.</h3>
+</p>
+<p style="margin:10px;10px;10px;10px;">
+<h3>We provide a number of programmes that ensure an all-round development of the child. The success of each programme depends greatly on flexibilty, understanding and a balanced approach to learning through fun, games and structures schedule.</h3>
+ </p>
+<div style="top:0%;left:100%;width:97%;height:100%;position:absolute;">
+<img id="img1" src="/ecreche/images/Busy-Bees-Creche-Kilkenny-reception-2.jpg" style="width:100%;height:100%">
+
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

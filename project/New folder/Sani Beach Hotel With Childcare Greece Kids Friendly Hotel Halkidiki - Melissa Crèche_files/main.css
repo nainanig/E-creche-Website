@@ -1,0 +1,545 @@
+/* Colour Palette ------------------------------------------- 
+   Main fonts - Grey: #666666 - Nav titles - Grey: #333333 
+   Call to action: - Yellow #F9B200 - Rollover Blue: #2B6082 */
+   
+@import "layout.css"; 
+@import "safari.css";
+
+/* Index ------------------------------------------- 
+   1. 		Reset 
+   2. 		Global HTML Tags 
+   3. 		Text elements 
+   3.2 		Link styles
+   3.3		Button styles
+   3.2.1 	Topnav right 
+   3.2.2 	Topnav left
+   3.2.3 	Subnav 2nd level navigation
+   3.2.3 	Hotels 3rd level navigation
+   3.2.4 	Footer links
+   4. 		Misc classes 
+   6. 		Form fields */
+
+/* 1. Reset ------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
+pre, a, abbr, acronym, address, big, cite, code, del , dfn, em, font, img, ins, kbd, 
+q, s, samp, small, strike, strong, tt, var, dl, dt, dd, fieldset, form, 
+label, legend, table, caption, tbody, tfoot, thead, tr, th, td, button, form, fieldset, input  {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-family: inherit;
+	vertical-align: baseline;
+	background: transparent;
+	}
+ul.reset, ul.reset li { list-style: none; margin:0; padding:0;}
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* 2. Global HTML Tags ------------------------------------------- */
+body {
+	font-size:62.5%; /* Sets all fonts ready for em use at easy to read pixels eg. 1.0em = 10px*/
+	font-family:HelveticaNeue, Helvetica, Arial, sans-serif;
+	background:#FFF url(/images/static/page_bg.jpg) top left repeat-x;
+	color:#666666;
+}
+
+/* 3. Text elements ------------------------------------------- */
+.wrapper { font-size:1.1em; } /* body text 11px */
+h1,h2,h3,h4,h5,h6 { font-weight: normal; color: #666; }
+h1 { font-size: 2em; margin-bottom: 0.5em;  font-weight:400;} 
+h2 { font-size: 1.7em; margin-bottom: 0.5em;  font-weight:400;}
+h3 { font-size: 1.5em; top:0px; position:relative; bottom:0px; font-weight:400; }
+.hotels_blurb h3 { font-size: 1.5em; margin-bottom: 0.5em; position:absolute; } 
+.hotels_blurb h3 a:link, .hotels_blurb h3 a:visited{color: #666;}
+.internal_ads h3 { font-size: 1.4em; margin-bottom: 0.5em; line-height:1.8em; position:relative; } 
+h4 { font-size: 1.1em; margin-bottom: 1em; } /* defaults to 11px/1.1em */
+p   { margin: 0 0 .8em; line-height:1.8em; }
+
+/*larger content text */
+.col_thick_left p, .wide, .home .col_thin_left p, .col_thick_top p { font-size:1.2em; }
+.col_thick_left li { line-height:1.8em; padding-bottom:5px; font-size:1.2em; }
+
+/* Fixing bold text alignment CUFON fix - Bold and regular fonts have different alignment, hack each browser to align */
+h1 strong{ position:relative; top:0px; margin-bottom: 1em; font-weight:700;}
+h2 strong{ position:relative; top:0px; margin-bottom: 1em; font-weight:700;} 
+h3 strong{ position:relative; top:0px; bottom:0px; margin-bottom: 1em; font-weight:700;}
+
+.cufon-vml {
+       /* margin: 0px 0 10px 0;
+        font-weight:100;*/
+} 
+cufontext
+{
+    margin-top:-5px;
+}
+
+/*.cufon-vml h3 strong
+{
+    position:relative; 
+    top:-8px;
+}*/
+
+
+
+.internal_ads h3 strong{ position:relative; top:0px; }
+.ru_RU strong, .el_GR strong { position:relative; top:0 !important; }
+
+
+/* 3.2 Link styles ------------------------------------------- */
+a:link, a:visited { color: #E1A100;; text-decoration: none; }
+a:hover, a:focus, a:active { color: #2B6082; }
+
+.email_link a:link, .email_link a:visited { color: #666666 !important; background:none !important; padding:0 !important; }
+.email_link a:hover, .email_link a:focus, .email_link a:active { text-decoration:underline; }
+
+.pagination a:link, .pagination a:visited { color: #F9B200; }
+.pagination a:hover, .pagination a:focus, .pagination a:active { color:#2B6082; }
+
+/* 3.3. Button styles -------------------------------------------  */
+/* Call to action links */
+.button a:link, .button a:visited,
+.col_thin_left a:link, .col_thin_left a:visited,
+.internal_ad_text a:link, .internal_ad_text a:visited,
+.col_thin_right a:link, .col_thin_right a:visited {
+	color:#F9B200;
+	background:url(/images/static/arrow_yellow.gif) right top no-repeat;
+	padding-right:12px;
+	font-weight:bold;
+	line-height:14px;
+	vertical-align:middle;
+	*display:inline-block;
+	position:relative;
+	
+}
+
+.col_thin_left a:link, .col_thin_left a:visited {
+	line-height:inherit;
+	background:url(/images/static/arrow_yellow.gif) right 1px no-repeat;
+}
+
+.button a:hover, .button a:active,  .button a:focus,
+.col_thin_left a:hover, .col_thin_left a:active, .col_thin_left a:focus,
+.internal_ad_text a:hover, .internal_ad_text a:active, .internal_ad_text a:focus,
+.col_thin_right a:hover, .col_thin_right a:active, .col_thin_right a:focus {
+	color:#e1a100;
+}
+
+.col_thick_right .strapline a:link, .col_thick_right .strapline a:visited {
+	display:inline-block;
+	background:url(/images/static/arrow_yellow.gif) right top no-repeat;
+}
+
+.our_hotels p.strapline a
+{
+	display: block;
+	float: left;	
+}
+
+/* rounded corner buttons */
+a.btn_round_yellow { 
+	background:url(/images/static/btn_yellow_leftcorner.gif) top left no-repeat;
+	float:left;
+	color:#FFF !important;
+	font-weight:bold;
+	white-space:nowrap;
+	width:auto;
+	padding:7px 25px 4px;
+	height:18px;
+	position:relative;
+}
+
+a.btn_round_yellow:hover, a.btn_round_yellow:active,  a.btn_round_yellow:focus {
+	background-position: bottom left !important;
+}
+
+.col_thick_bottom .hotel_desc p a.btn_round_yellow {
+	height: 19px;
+	padding: 5px 25px;
+}
+
+.col_thick_bottom .floorplan {
+	display: block;
+	text-align: center;
+}
+
+.btn_corner {
+	background:url(/images/static/btn_right_corner.gif) left top no-repeat;
+	width:4px;
+	height:29px;
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+
+#btn_switch .btn_corner {
+	background:url(/images/static/btn_right_corner_grey.gif) left top no-repeat;
+}
+
+a.btn_round_yellow .open {
+	background:url(/images/static/btn_yellow_close.gif) right center no-repeat !important;
+	padding-right:15px;
+	display:block;
+	osition:absolute;
+	top:7px;
+}
+
+a.btn_round_yellow .close {
+	background:url(/images/static/btn_yellow_open.gif) right center no-repeat !important;
+	padding-right:15px;
+	display:block;
+}
+
+a.top:link, a.top:visited{
+	background:url(/images/static/totop_arrow.gif) 0px 3px no-repeat;
+	color:#2B6082;
+	padding-left:15px;
+	margin:15px 0;
+	display:block;
+	clear:both;
+}
+
+/* 3.2.1 Topnav right ------------------------------------------- */
+.header .right a:link, .header .right a:visited { 
+	color: #8A8A8A; 
+	text-decoration: none;  
+}
+.header .right a:hover, .header .right a:focus, .header .right a:active { 
+	color: #2B6082; 
+}
+
+/* 3.2.2 Topnav left ------------------------------------------- */
+.header .left a:link, .header .left a:visited { 
+	color: #333; 
+	text-decoration: none; 
+	position:relative;
+	text-shadow: 0.1em 0.1em 0.05em #FFF;
+	cursor:pointer;
+	font-size:1.2em; /* 13px (inherits 1.1em from wrapper */
+}
+.header .left a:hover, .header .left a:focus, .header .left a:active { 
+	color: #2e5672;
+}
+
+.header .left .selected a:link, .header .left .selected a:visited { 
+	color: #2B6082; 
+	font-weight:bold;
+}
+
+.header .topnav a .gradient { 
+	position:absolute; 
+	background:url(/images/static/gradient_png.png) repeat-x; 
+	display: block;
+  	width: 100%;
+  	height: 30px;
+ }
+
+/* 3.2.3 Subnav 2nd level navigation ----------------------------- */
+.subnav a:link, .subnav a:visited { 
+	color: #333; 
+	text-decoration: none;
+	font-size:1.2em; /* 13px (inherits 1.1em from wrapper */
+}
+.subnav a:hover, .subnav a:focus, .subnav a:active { 
+	color: #275c7e; 
+}
+.subnav .selected a:link, .subnav .selected a:visited { 
+	color: #1e4662;
+	font-weight:bold;
+}
+
+/* 3.2.3 Hotels 3rd level navigation ----------------------------- */
+.header .hotels a:link, .header .hotels a:visited { 
+	color:#CCC; 
+	text-shadow:none;
+}
+.header .hotels a:hover, .header .hotels a:focus, .header .hotels a:active { 
+	color: #FFF;
+	outline:none;
+}
+
+.hotels_nav_wrapper .selected a:link, .hotels_nav_wrapper .selected a:visited { 
+	color: #FFF !important; 
+}
+
+/* 3.2.4 Footer links ------------------------------------------- */
+.footer a:link, .footer a:visited { 
+	color: #666; 
+	text-decoration: none; 
+}
+.footer a:hover, .footer a:focus, .footer a:active { 
+	color: #2B6082;
+}
+.footer .selected a:link, .footer .selected a:visited { 
+	color: #2B6082;
+	font-weight:bold;
+}
+
+/* 4. Misc classes ------------------------------------------- */
+.floatright { float:right; }
+.floatleft { float:left; }
+.hidden { display:none; }
+.show { display:block; }
+.noborder { border:none !important; }
+.odd { background:#f8f8f8; }
+.fullbox { /* full width box with gradient as used on our_hotels page*/
+	background:url(/images/static/full_box_bg.gif) top left no-repeat; 
+	width:930px;
+	padding:22px 12px 10px;
+	}
+
+/* Clear fix */ /* clear the container div in the absence of a child clearing div */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0 !important;
+	clear: both;
+	visibility: hidden;
+	}
+/* ie6 */	
+* html .clearfix { height: 1%; overflow: visible; }
+/* ie7 */
+.clearfix { overflow:hidden; }
+	
+.clear {
+	clear:both;
+	height:1px;
+}
+
+a.rollover:hover, a.rollover:active, a.rollover:focus {
+	background-position: bottom left !important;
+}
+.replace {
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-indent: -9000px;
+	}
+.red { border: 1px solid red; }
+
+/* 6. Form fields ------------------------------------------- */
+label       		{ 
+	font-weight:bold; line-height:1.5em; vertical-align:middle; 
+}
+input, select		{ 
+	line-height:1.5em; vertical-align:middle; 
+}
+
+/* unsubscribe form */
+#frm_unsubscribe {
+font-weight:bold;
+line-height:1.5em;
+vertical-align:middle;
+margin-top: 20px;
+}
+#frm_unsubscribe .frm_input {
+	border:1px solid #CCCCCC;
+	color:#666666;
+	padding:4px 3px;
+	width:154px;
+	margin-left: 10px;
+}
+#frm_unsubscribe .frm_submit {
+	width:103px;
+	height:22px;
+	background: url(/images/static/btn_submit.gif) no-repeat 0 2px;
+	color: #fff;
+	font-size: 11px;
+	margin-left: 10px;
+	line-height: 20px;
+	text-align: left;
+	text-indent: 16px;
+	cursor: pointer;
+}
+
+.footer-gradient {
+	background: url(/images/static/footer-bg.jpg) repeat-x;	
+	padding:0 0 20px;
+}
+
+#footer_links a {
+	color: #999 !important;	
+}
+#footer_sete{
+	float:left;
+	width:60px;
+	height:24px;
+	margin:0 10px 0 0;
+	background-image:url('/images/static/logo_sete.png');
+	text-indent:-9001px;
+}
+
+/* Agency Template >> =================================================*/
+
+.agency-template .col_thick_left{
+	padding: 11px 12px 22px;
+}
+
+.agency-template .col_thick_left h1{
+	font-size: 17px;
+	margin: 0 0 9px;
+}
+
+.agency-template .col_thick_left h1 p{
+	margin:0;
+}
+
+.agency-template .col_thick_left .agency_request{
+	padding: 34px 0 0;
+}
+
+.agency-template .col_thick_left .agency-info{
+	width:423px;
+	padding: 0 0 28px;
+}
+
+.agency-template .col_thick_left .agency-info dl{
+	overflow:hidden;
+	width:423px;
+	padding:0 0 13px;
+}
+
+.agency-template .col_thick_left .agency-info dt{
+	width:200px;
+	float:left;
+	font-size: 13px;
+    margin: 7px 0 0;
+}
+
+.agency-template .col_thick_left .agency-info label{
+	
+}
+
+.agency-template .col_thick_left .agency-info dd{
+	width:214px;
+	float:right;
+}
+
+.agency-template .col_thick_left .agency-info .frm_text{
+	padding:2px;
+	border:1px solid #c0c0c0;
+	width:208px;
+	height:20px;
+	line-height:20px;
+}
+
+.agency-template .col_thick_left .guest-info-table{
+	margin: 23px 0 0;
+}
+
+.agency-template .col_thick_left .guest-info-table th{
+	font-size: 13px;
+    padding: 0 0 12px;
+    text-align: left;
+}
+
+.agency-template .col_thick_left .guest-info-table td{
+	padding: 0 0 27px;
+	white-space:nowrap;
+}
+
+.agency-template .col_thick_left .guest-info-table .frm_text{
+	padding:2px;
+	border:1px solid #c0c0c0;
+	width:120px;
+	height:13px;
+	line-height:13px;
+}
+
+.agency-template .col_thick_left .guest-info-table .frm_dropdown{
+	width:118px;
+	border:1px solid #c0c0c0;
+}
+
+.agency-template .col_thick_left .guest-info-table .frm_dropdown_date{
+	width:auto;
+}
+
+.agency-template .button-set{
+	overflow:hidden;
+	padding: 8px 0 34px;
+}
+
+.agency-template .col_thick_left label em{
+	color:#ff5f09;
+	margin:0 0 0 5px;
+}
+
+.agency-template .col_thick_left label.send,
+.agency-template .col_thick_left label.round{
+    background: url("/images/static/input-bg.gif") no-repeat 0 0;
+    display: inline;
+    float: right;
+    height: 29px;
+    padding: 0 0 0 10px;
+	margin:0 0 0 17px;
+}
+
+.agency-template .col_thick_left label.send span,
+.agency-template .col_thick_left label.round span{
+    background: url("/images/static/input-bg.gif") no-repeat 100% 0;
+    float: left;
+    height: 29px;
+    padding: 0 10px 0 0;
+}
+
+.agency-template .col_thick_left label.send input,
+.agency-template .col_thick_left label.round input{
+    color: #FFF;
+    cursor: pointer;
+    float: left;
+    padding: 4px 5px 6px;
+}
+
+.agency-template .col_thick_left label.send input{
+    background: url("/images/static/arrow_white.gif") no-repeat 100% 50%;
+    padding: 4px 10px 6px 5px;
+}
+
+.agency-template .col_thick_left p.required{
+	text-align:right;
+	font-size: 11px;
+}
+
+.agency-template .col_thick_left p.required em{
+	color:#ff5f09;
+	margin:0 5px 0 0;
+}
+
+.agency-template .col_thick_left .error ul,
+.agency-template .col_thick_left .error li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
+
+.agency-template .col_thick_left .error {
+    color: red;
+}
+
+/* << Agency Template =================================================*/
+
+table.styled-table {
+	width:100%;
+	font-size:13px;
+	margin:20px 0;
+}
+table.styled-table thead {
+	border-bottom:2px solid;
+	padding:5px 0;
+}
+table.styled-table tbody tr {
+	border-bottom:1px solid #ddd;
+}
+table.styled-table tbody tr:hover {
+	border-bottom:1px solid #ddd;
+	background-color:#eee;
+}
+table.styled-table tbody td {
+	padding:5px 0;
+	text-align:center;
+}
+table.styled-table thead th {
+	padding:5px 0;
+	background-color:#eee;
+}
